@@ -317,7 +317,7 @@ else
 	[[ "$uname" == "" ]] && uname=$addr
 	set_addr $path $seg $addr
 fi
-
+uname=${uname/-/_}
 # construct uprobe
 uprobe="$utype:$uname $path:$addr"
 [[ "$uargs" != "" ]] && uprobe="$uprobe $uargs"
